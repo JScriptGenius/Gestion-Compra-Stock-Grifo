@@ -21,7 +21,7 @@ public class ConectorDB{
         try{        
             conexion = DriverManager.getConnection(cadena);
             st = conexion.createStatement();           
-        }catch(Exception e){
+        }catch(SQLException e){
             Mensajeria.Message("ERROR: NO SE PUDO CONECTAR CON LA BASE DE DATOS. "+e.getMessage());
         }
     }
